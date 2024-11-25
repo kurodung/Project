@@ -121,7 +121,8 @@ light_pins = [4, 17, 27, 26]  # เปลี่ยนตามพินที่
 
 # ตั้งค่า GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(light_pins, GPIO.OUT, initial=GPIO.HIGH)  # ตั้งเป็น HIGH เพื่อเริ่มต้น (ปิด)
+GPIO.setwarnings(False)  # ปิดคำเตือน
+GPIO.setup(light_pins, GPIO.OUT, initial=GPIO.HIGH)
 
 
 # ฟังก์ชันปรับสถานะ GPIO ตามสถานะในไฟล์ JSON
