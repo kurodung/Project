@@ -5,7 +5,7 @@ from scipy.signal import find_peaks
 import os
 import json
 
-edf_file = "/home/pi/fifapy/data/S2-B3-C1_INSIGHT2_49865_2023.11.01T14.43.50+07.00.edf"
+edf_file = "/home/pi/fifapy/data/B3-S1-01.edf"
 
 channel_names = ['AF3', 'AF4']
 start_time = 5
@@ -146,6 +146,3 @@ try:
 
 except KeyboardInterrupt:
     print("กำลังปิดโปรแกรม...")
-finally:
-    # รีเซ็ต GPIO ก่อนออก
-    GPIO.cleanup()
