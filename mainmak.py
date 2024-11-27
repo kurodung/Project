@@ -128,9 +128,9 @@ GPIO.setup(light_pins, GPIO.OUT, initial=GPIO.HIGH)
 # ฟังก์ชันปรับสถานะ GPIO ตามสถานะในไฟล์ JSON
 def update_lights(states):
     for i, state in enumerate(states):
-        if state == "open":
+        if state == "closed":
             GPIO.output(light_pins[i], GPIO.HIGH)  # ปิดไฟ
-        elif state == "closed":
+        elif state == "open":
             GPIO.output(light_pins[i], GPIO.LOW)   # เปิดไฟ
 # ปรับสถานะไฟตาม JSON
 update_lights(device_states)
